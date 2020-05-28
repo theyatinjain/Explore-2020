@@ -1,0 +1,389 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Glitter Feet</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("select#no-of-team-members").change(function () {
+                var selected = $(this).children("option:selected").val();
+                var i = 1, max = 15;
+                for (i = 1; i <= selected; i++) {
+                    $("." + i).css("display", "block");
+                }
+                for (j = i; j <= max; j++) {
+                    $("." + j).css("display", "none");
+                }
+            });
+        });
+    </script>
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div class="title_container">
+                <h2>The Glitter Feet Registration Form</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="">
+                    <form name="submit-to-google-sheet">
+                        <label for="team-name">Enter Team Name</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                            <input id="team-name" name="team-name" type="text" placeholder="Team Name" required/>
+                        </div>
+                        <label for="email">Enter Email</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="email" name="email" type="email" placeholder="Email" required/>
+                        </div>
+                        <label for="alt-email">Enter Alternative Email</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="alt-email" name="alt-email" type="email" placeholder="Alternative Email" />
+                        </div>
+                        <label for="contact">Enter Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="contact" name="contact" type="text" placeholder="Contact Number" required/>
+                        </div>
+                        <label for="alt-contact">Alternative Enter Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="alt-contact" name="alt-contact" type="text"
+                                placeholder="Alternative Contact Number" />
+                        </div>
+                        <div class="input_field select_option">
+                            <select id="campus" name="campus" required>
+                                <option value="">Choose Campus</option>
+                                <option value="punjab">Punjab(Rajpura)</option>
+                                <option value="himachal">Himachal Pradesh(Baddi)</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                        <div class="input_field select_option">
+                            <select id="no-of-team-members" name="no_of_members" required>
+                                <option value=""> Select Number of Team Members</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+
+
+
+                        <div class="members 1">
+                            <label for="m1-name">Team Head Name/Member 1</label>
+                            <div class="input_field">
+                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-name" type="text" name="name1"
+                                    placeholder="Team Head Name/Member 1" required/>
+                            </div>
+                            <label for="m1-rn">Member 1 Roll No</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-rollno" type="text" name="r1"
+                                    placeholder="Team Head Name/Member 1 Roll no." required/>
+                            </div>
+                            <label for="m1-dept">Member 1 Department</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="dpt1"
+                                    placeholder="Team Head Name/Member 1 Department" required/>
+                            </div>
+                        </div>
+    
+                        <div class="members 2">
+                            <label for="m2-name">Member 2 Name</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-name" type="text" name="name2" placeholder="Team Member 2 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 2 Roll No</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-rollno" type="text" name="r2"
+                                    placeholder="Team Member 2 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 2 Department</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-dpt" type="text" name="dpt2"
+                                    placeholder="Team Member 2 Department" required/>
+                            </div>
+                        </div>
+    
+                        <div class="members 3">
+                            <label for="m2-name">Member 3 Name</label>
+                        <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-name" type="text" name="name3" placeholder="Team Member 3 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 3 Roll No</label>
+                            <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-rollno" type="text" name="r3"
+                                    placeholder="Team Member 3 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 3 Department</label>
+                            <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-dpt" type="text" name="dpt3"
+                                    placeholder="Team Member 3 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 4">
+                                <label for="m2-name">Member 4 Name</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-name" type="text" name="name4" placeholder="Team Member 4 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 4 Roll No</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-rollno" type="text" name="r4"
+                                    placeholder="Team Member 4 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 4 Department</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-dpt" type="text" name="dpt4"
+                                    placeholder="Team Member 4 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 5">
+                                <label for="m2-name">Member 5 Name</label>
+                            <div class="input_field members 5"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m5-name" type="text" name="name5" placeholder="Team Member 5 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 5 Roll No</label>
+                            <div class="input_field members 5"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m5-rollno" type="text" name="r5"
+                                    placeholder="Team Member 5 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 5 Department</label>
+                            <div class="input_field members 5"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m5-dpt" type="text" name="dpt5"
+                                    placeholder="Team Member 5 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 6">
+                                <label for="m2-name">Member 6 Name</label>
+                            <div class="input_field members 6"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m6-name" type="text" name="name6" placeholder="Team Member 6 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 6 Roll No</label>
+                            <div class="input_field members 6"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m6-rollno" type="text" name="r6"
+                                    placeholder="Team Member 6 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 6 Department</label>
+                            <div class="input_field members 6"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m6-dpt" type="text" name="dpt6"
+                                    placeholder="Team Member 6 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 7">
+                                <label for="m2-name">Member 7 Name</label>
+                            <div class="input_field members 7"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m7-name" type="text" name="name7" placeholder="Team Member 7 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 7 Roll No</label>
+                            <div class="input_field members 7"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m7-rollno" type="text" name="r7"
+                                    placeholder="Team Member 7 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 7 Department</label>
+                            <div class="input_field members 7"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m7-dpt" type="text" name="dpt7"
+                                    placeholder="Team Member 7 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 8">
+                                <label for="m2-name">Member 8 Name</label>
+                            <div class="input_field members 8"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m8-name" id="m8-name" type="text" name="name8"
+                                    placeholder="Team Member 8 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 8 Roll No</label>
+                            <div class="input_field members 8"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m8-rollno" type="text" name="r8"
+                                    placeholder="Team Member 8 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 8 Department</label>
+                            <div class="input_field members 8"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m8-dpt" type="text" name="dpt8"
+                                    placeholder="Team Member 8 Department" required/>
+                                </div>
+                            </div>
+    
+                            <div class="members 9">
+                                <label for="m2-name">Member 9 Name</label>
+                            <div class="input_field members 9"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m9-name" type="text" name="name9" placeholder="Team Member 9 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 9 Roll No</label>
+                            <div class="input_field members 9"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m9-rollno" type="text" name="r9"
+                                    placeholder="Team Member 9 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 9 Department</label>
+                            <div class="input_field members 9"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m9-dpt" type="text" name="dpt9"
+                                    placeholder="Team Member 9 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 10">
+                                <label for="m2-name">Member 10 Name</label>
+                            <div class="input_field members 10"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m10-name" type="text" name="name10"
+                                    placeholder="Team Member 10 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 10 Roll No</label>
+                            <div class="input_field members 10"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m10-rollno" type="text" name="r10"
+                                    placeholder="Team Member 10 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 10 Department</label>
+                            <div class="input_field members 10"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m10-dpt" type="text" name="dpt10"
+                                    placeholder="Team Head Member 10 Department" required/>
+                                </div>
+                            </div>
+    
+                            <div class="members 11">
+                                <label for="m2-name">Member 11 Name</label>
+                            <div class="input_field members 11"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m11-name" type="text" name="name11" placeholder="Team Member 11 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 11 Roll No</label>
+                            <div class="input_field members 11"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m11-rollno" type="text" name="r11"
+                                    placeholder="Team Member 11 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 11 Department</label>
+                            <div class="input_field members 11"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m11-dpt" type="text" name="dpt11"
+                                    placeholder="Team Member 11 Department" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 12">
+                                <label for="m2-name">Member 12 Name</label>
+                            <div class="input_field members 12"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m12-name" type="text" name="name12"
+                                    placeholder="Team Member 12 Name" required/>
+                            </div>
+                            <label for="m2-rn">Member 12 Roll No</label>
+                            <div class="input_field members 12"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m12-rollno" type="text" name="r12"
+                                    placeholder="Team Member 12 Roll no." required/>
+                            </div>
+                            <label for="m2-dept">Member 12 Department</label>
+                            <div class="input_field members 12"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m12-dpt" type="text" name="dpt12"
+                                    placeholder="Team Member 12 Department" required/>
+                                </div>
+                            </div>
+    
+                            <div class="members 13">
+    
+                                <label for="m2-name">Member 13 Name</label>
+                            <div class="input_field members 13"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m13-name" type="text" name="name13"
+                                    placeholder="Team Member 13 Name" />
+                            </div>
+    
+                            <label for="m2-rn">Member 13 Roll No</label>
+                            <div class="input_field members 13"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m13-rollno" type="text" name="r13"
+                                    placeholder="Team Member 13 Roll no." />
+                            </div>
+    
+                            <label for="m2-dept">Member 13 Department</label>
+                            <div class="input_field members 13"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m13-dpt" type="text" name="dpt13"
+                                    placeholder="Team Member 13 Department" />
+                                </div>
+                            </div>
+    
+                            <div class="members 14">
+                                <label for="m2-name">Member 14 Name</label>
+                            <div class="input_field members 14"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m14-name" type="text" name="name14" placeholder="Team Member 14 Name" />
+                            </div>
+                            <label for="m2-rn">Member 14 Roll No</label>
+                            <div class="input_field members 14"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m14-rollno" type="text" name="r14"
+                                    placeholder="Team Member 14 Roll no." />
+                            </div>
+                            <label for="m2-dept">Member 14 Department</label>
+                            <div class="input_field members 14"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m14-dpt" type="text" name="dpt14"
+                                    placeholder="Team Member 14 Department" />
+                            </div>
+                            </div>
+    
+                            <div class="members 15">
+                                <label for="m2-name">Member 15 Name</label>
+                            <div class="input_field members 15"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m15-name" type="text" name="name15"
+                                    placeholder="Team Member 15 Name" />
+                            </div>
+                            <label for="m2-rn">Member 15 Roll No</label>
+                            <div class="input_field members 15"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m15-rollno" type="text" name="r15"
+                                    placeholder="Team Member 15 Roll no." />
+                            </div>
+                            <label for="m2-dept">Member 15 Department</label>
+                            <div class="input_field members 15"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m15-dpt" type="text" name="dpt15"
+                                    placeholder="Team Member 15 Department" />
+                                </div>
+                            </div>
+    
+    
+    
+    
+    
+                            
+                            <div  class="input_field checkbox_option">
+                                <input type="checkbox" id="cb1"required>
+                                <label for="cb1">I agree that there are not more than 4 C2S2 Panache Members in our
+                                    Team</label>
+                            </div>
+    
+                            <br>
+    
+                            <div class="input_field checkbox_option">
+                                <input type="checkbox" id="cb2" required>
+                                <label for="cb2">I agree that all individuals are part of one team only(An individual can
+                                    participate in only one team for the same event).</label>
+                            </div>
+    
+                            <div class="input_field checkbox_option">
+                                <input type="checkbox" id="cb3" required>
+                                <label for="cb3">I accept that I have read all the rules and regulations from the Rulebook.</label>
+                            </div>
+
+                        <input class="button" type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRmG9FaBXLAw6Uhn9Z0PT6qldXZhJvV-0CItJ6-oBeSCppLwMU/exec'
+        const form = document.forms['submit-to-google-sheet']
+        console.log(form);
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert('Success!', response))
+                .catch(error => {
+                    alert('Error!', error.message)})
+        })
+    </script>
+
+
+</body>
+
+</html>

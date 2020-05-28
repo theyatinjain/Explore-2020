@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bounce Goal</title>
+    <style>
+        .members{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div class="title_container">
+                <h2>Bounce Goal  Registration Form</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="">
+                    <form name="submit-to-google-sheet">
+                        <label for="email">Your Email</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="email" name="email" type="email" placeholder="Enter Email" required/>
+                        </div>
+                        <label for="contact">Your  Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="contact" name="contact" type="text" placeholder="Enter Contact Number" required/>
+                        </div>
+                        <label for="alt-contact">Your  Alternative Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="alt-contact" name="alt-contact" type="text"
+                                placeholder="Enter Alternative Contact Number" />
+                        </div>
+                        <div class="input_field select_option">
+                            <select id="campus" name="campus" required>
+                                <option value="">Choose Campus</option>
+                                <option value="punjab">Punjab(Rajpura)</option>
+                                <option value="himachal">Himachal Pradesh(Baddi)</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                        
+
+
+
+                        <div class="members 1">
+                            <label for="m1-name">Your Name</label>
+                            <div class="input_field">
+                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-name" type="text" name="name1"
+                                    placeholder="Enter Your Name" required/>
+                            </div>
+                            <label for="m1-rn">Your Roll No.</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-rollno" type="text" name="r1"
+                                    placeholder="Enter Your Roll no." required/>
+                            </div>
+                            <label for="m1-dept">Your Department</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="dpt1"
+                                    placeholder="Enter Your Department"  required/>
+                            </div>
+                        </div>
+      
+                            <div  class="input_field checkbox_option">
+                                <input type="checkbox" id="cb1"required>
+                                <label for="cb1">I accept that I have read all the rules and regulations from the Rulebook.</label>
+                            </div>
+                        <input class="button" type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyHPKPlWE2vbo1AhZm61tNDoJRyr0jTY2aGtaqb2QH-mMUwk8H1/exec'
+        const form = document.forms['submit-to-google-sheet']
+        console.log(form);
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert('Success!', response))
+                .catch(error => {
+                    alert('Error!', error.message)})
+        })
+    </script>
+
+
+</body>
+
+</html>

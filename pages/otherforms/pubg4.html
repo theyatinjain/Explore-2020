@@ -1,0 +1,200 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./form.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pubg Solo and Squad</title>
+    <style>
+     
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("select#no-of-team-members").change(function () {
+                var selected = $(this).children("option:selected").val();
+                var i = 1, max = 4;
+                for (i = 1; i <= selected; i++) {
+                    $("." + i).css("display", "block");
+                }
+                for (j = i; j <= max; j++) {
+                    $("." + j).css("display", "none");
+                }
+            });
+        });
+    </script>
+
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div class="title_container">
+                <h2>Pubg Solo & Squad Registration Form</h2>
+            </div>
+            <div class="row clearfix">
+                <div class="">
+                    <form name="submit-to-google-sheet">
+                        <label for="team-name">Enter Team Name</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                            <input id="team-name" name="team-name" type="text" placeholder="Team Name" required/>
+                        </div>
+                        <label for="email">Enter Email</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="email" name="email" type="email" placeholder="Email" required/>
+                        </div>
+                        <label for="alt-email">Enter Alternative Email</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="alt-email" name="alt-email" type="email" placeholder="Alternative Email" />
+                        </div>
+                        <label for="contact">Enter Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="contact" name="contact" type="text" placeholder="Contact Number" required/>
+                        </div>
+                        <label for="alt-contact">Enter Alternative Contact</label>
+                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                            <input id="alt-contact" name="alt-contact" type="text"
+                                placeholder="Alternative Contact Number" />
+                        </div>
+                        <div class="input_field select_option">
+                            <select id="campus" name="campus" required>
+                                <option value="">Choose Campus</option>
+                                <option value="punjab">Punjab(Rajpura)</option>
+                                <option value="himachal">Himachal Pradesh(Baddi)</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+                       
+
+  <div class="input_field select_option">
+                            <select id="no-of-team-members" name="no_of_members" required>
+                                <option value=""> Select Number of Team Members</option>
+                                <option value="1">Solo</option>
+                                <option value="4">Squad</option>
+                            </select>
+                            <div class="select_arrow"></div>
+                        </div>
+
+
+
+                        <div class="members 1">
+                            <label for="m1-name">Team Member 1</label>
+                            <div class="input_field">
+                                <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-name" type="text" name="name1"
+                                    placeholder="Team Member 1" required/>
+                            </div>
+                            <label for="m1-rn">Member 1 Roll No</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-rollno" type="text" name="r1"
+                                    placeholder="Team Member 1 Roll no." required/>
+                            </div>
+                            <label for="m1-dept">Member 1 Department</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="dpt1"
+                                    placeholder="Team Member 1 Department" required/>
+                            </div>
+                            <label for="m1-dept">Member 1 PUBG username</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="pubgID1"
+                                    placeholder="Team Member 1 PUBG username" required/>
+                            </div>
+                        </div>
+    
+                        <div class="members 2">
+                            <label for="m2-name">Member 2 Name</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-name" type="text" name="name2" placeholder="Team Member 2 Name" />
+                            </div>
+                            <label for="m2-rn">Member 2 Roll No</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-rollno" type="text" name="r2"
+                                    placeholder="Team Member 2 Roll no." />
+                            </div>
+                            <label for="m2-dept">Member 2 Department</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m2-dpt" type="text" name="dpt2"
+                                    placeholder="Team Member 2 Department" />
+                            </div>
+                            <label for="m1-dept">Member 2 PUBG username</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="pubgID2"
+                                    placeholder="Team Member 2 PUBG username" required/>
+                            </div>
+                        </div>
+    
+                        <div class="members 3">
+                            <label for="m2-name">Member 3 Name</label>
+                        <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-name" type="text" name="name3" placeholder="Team Member 3 Name" />
+                            </div>
+                            <label for="m2-rn">Member 3 Roll No</label>
+                            <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-rollno" type="text" name="r3"
+                                    placeholder="Team Member 3 Roll no." />
+                            </div>
+                            <label for="m2-dept">Member 3 Department</label>
+                            <div class="input_field members 3"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m3-dpt" type="text" name="dpt3"
+                                    placeholder="Team Member 3 Department" />
+                            </div>
+                            <label for="m1-dept">Member 3 PUBG username</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="pubgID3"
+                                    placeholder="Team Member 3 PUBG username" required/>
+                            </div>
+                            </div>
+    
+                            <div class="members 4">
+                                <label for="m2-name">Member 4 Name</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-name" type="text" name="name4" placeholder="Team Member 4 Name" />
+                            </div>
+                            <label for="m2-rn">Member 4 Roll No</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-rollno" type="text" name="r4"
+                                    placeholder="Team Member 4 Roll no." />
+                            </div>
+                            <label for="m2-dept">Member 4 Department</label>
+                            <div class="input_field members 4"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m4-dpt" type="text" name="dpt4"
+                                    placeholder="Team Member 4 Department" />
+                            </div>
+                            <label for="m1-dept">Member 4 PUBG username</label>
+                            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                <input id="m1-dpt" type="text" name="pubgID4"
+                                    placeholder="Team Member 4 PUBG username" required/>
+                            </div>
+                            </div>
+
+                            
+                            <div class="input_field checkbox_option">
+                                <input type="checkbox" id="cb3" required>
+                                <label for="cb3">I accept that I have read all the rules and regulations from the Rulebook.</label>
+                            </div>
+
+                        <input class="button" type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEY6drv0fu-m9PFf1PaTmX8cekkMztEWfuwCh6_88Y3ygD5tDk/exec'
+        const form = document.forms['submit-to-google-sheet']
+        console.log(form);
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert('Success!', response))
+                .catch(error => {
+                    alert('Error!', error.message)})
+        })
+    </script>
+
+
+</body>
+
+</html>
