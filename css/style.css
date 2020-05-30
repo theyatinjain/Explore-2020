@@ -18,7 +18,12 @@
 /* Tablet desktop :768px. */
 /* small mobile :320px. */
 /* Large Mobile :480px. */
-
+/* 1. Theme default css */
+/* Normal desktop :1200px. */
+/* Normal desktop :992px. */
+/* Tablet desktop :768px. */
+/* small mobile :320px. */
+/* Large Mobile :480px. */
 body {
   font-family: "Muli", sans-serif;
   font-weight: normal;
@@ -55,7 +60,7 @@ a:focus {
 a:focus,
 a:hover,
 .portfolio-cat a:hover,
-.footer-menu li a:hover {
+.footer -menu li a:hover {
   text-decoration: none;
 }
 
@@ -193,19 +198,13 @@ h3 {
   content: "";
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, #000 100%);
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, #000 100%);
-  background: linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, #000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#000000', GradientType=0);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
-}
-
-@media (max-width: 767px){
-  .overlay::before{
-    height: 65%;
-  }
 }
 
 .overlay-z0 {
@@ -217,9 +216,13 @@ h3 {
   position: absolute;
   content: "";
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, black 100%);
+
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.3) 0%, black 100%);
+
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, black 100%);
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#000000', GradientType=0);
+
   top: 0;
   left: 0;
   width: 100%;
@@ -236,9 +239,13 @@ h3 {
   position: absolute;
   content: "";
   background: -moz-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.8) 100%);
+
   background: -webkit-linear-gradient(top, black 0%, rgba(0, 0, 0, 0.8) 100%);
+
   background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.8) 100%);
+
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#cc000000', GradientType=0);
+
   top: 0;
   left: 0;
   width: 100%;
@@ -281,12 +288,15 @@ h3 {
   .pt-3 {
     padding-top: 3px;
   }
+  
   .pt-4 {
     padding-top: 4px;
   }
+  
   .pt-5 {
     padding-top: 5px;
   }
+  
   .pt-10 {
     padding-top: 5px;
   }
@@ -346,7 +356,7 @@ h3 {
   border: 1px solid transparent;
 }
 
-.mb-20px {
+.mb-20 {
   margin-bottom: 20px;
 }
 
@@ -372,10 +382,6 @@ h3 {
 
 .mb-40 {
   margin-bottom: 40px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
 }
 
 .mb-60 {
@@ -1865,20 +1871,24 @@ h3 {
   color: #fff;
 }
 
-.footer .made_by a{
-  text-decoration: none;
-}
 
 /*--------------------------------------------------------------------------------------------*/
-@media (min-width: 767px) {
-  .timer_area {
-    padding: 135px 0 63px 0;
-  }
+.timer_area {
+  padding-top: 135px;
+  padding-bottom: 63px;
 }
 
 @media (max-width: 767px) {
   .timer_area {
-    padding: 90px 0 50px 0;
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .timer_area {
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1918,6 +1928,7 @@ h3 {
 }
 
 @media (max-width: 767px) {
+
   .days,
   .hours,
   .minutes,
@@ -1948,7 +1959,11 @@ h3 {
   font-size: 4em;
 }
 
-/*----------------------------------------------------*/
+.mt-50 {
+  margin-top: 50px;
+}
+
+/*=====================================================================================================================*/
 
 .our-team {
   padding: 30px 0 40px;
